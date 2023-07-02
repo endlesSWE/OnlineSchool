@@ -1,7 +1,6 @@
 package core;
 
 import core.entities.Lecture;
-import core.utils.LectureUtils;
 
 public class Main {
 
@@ -11,6 +10,7 @@ public class Main {
         Lecture lecture2 = new Lecture("Geometry",3);
         Lecture lecture3 = new Lecture("Art", 4);
         Lecture lecture4 = new Lecture("History", 5);
+        Lecture lecture5 = new Lecture("Literature",6);
 
         Lecture.showLectureCount();
     }
