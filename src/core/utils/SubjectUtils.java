@@ -1,7 +1,16 @@
 package core.utils;
 
-public class SubjectUtils {
-    public void createSubjectUtils(int subjectId, int subjectName) {
+import core.entities.Subject;
 
+public class SubjectUtils {
+
+    private Subject subject;
+
+    public SubjectUtils(Subject subject) {
+        this.subject = subject;
+    }
+
+    void printSubject(){
+        System.out.println(subject);
     }
 }

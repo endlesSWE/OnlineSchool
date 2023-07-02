@@ -3,7 +3,13 @@ package core.utils;
 import core.entities.Homework;
 
 public class HomeworkUtils {
-   public void createHomeworkUtils(int homeworkId, String homeworkName){
+    private Homework homework;
 
+    public HomeworkUtils(Homework homework) {
+        this.homework = homework;
+    }
+
+    void printHomework(){
+        System.out.println(homework);
     }
 }
