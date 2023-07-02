@@ -2,22 +2,34 @@ package core.entities;
 
 public class Lecture {
 
-    private int id;
+    private int lectureId;
     private String lectureName;
     public static int lectureCount = 0;
-    Subject subject;
+    private Subject subject;
     Homework homework;
     Teacher teacher;
     Student student;
 
 
-    public Lecture(String lectureName, int id) {
+    public Lecture(String lectureName, int lectureId, Subject subject) {
         this.lectureName = lectureName;
-        this.id = id;
+        this.lectureId = lectureId;
+        this.subject = subject;
         lectureCount ++;
 
     }
+    public int getLectureId(){
+        return lectureId;
+    }
+    public String getLectureName(){
+        return lectureName;
+    }
+    public Subject subject(){
+        return subject;
+    }
+
     public static void showLectureCount () {
         System.out.println("Total number of lectures: " + lectureCount);
     }
+
 }

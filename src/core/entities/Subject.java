@@ -2,19 +2,28 @@ package core.entities;
 
 public class Subject {
     private int subjectId;
-    private int subjectName;
+    private String subjectName;
     private static int subjectCount = 0;
     Teacher teacher;
     Student student;
     Lecture lecture;
     Homework homework;
 
-    public Subject(int subjectId, int subjectName) {
+    public Subject(int subjectId, String subjectName) {
         this.subjectId = subjectId;
         this.subjectName = subjectName;
 
         subjectCount ++;
     }
+
+    public int getSubjectId() {
+        return subjectId;
+    }
+
+    public String getSubjectName() {
+        return subjectName;
+    }
+
     public static void showSubjectCount(){
         System.out.println("Total number of subjects: " + subjectCount);
     }
