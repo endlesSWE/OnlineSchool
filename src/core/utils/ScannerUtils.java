@@ -150,7 +150,7 @@ public class ScannerUtils {
         System.out.println("Enter lecture's Name:");
         String lectureName = scanner.nextLine();
 
-        return new Lecture(lectureName, lectureId, new Subject(3,"Biology"));
+        return new Lecture(lectureName, lectureId, );
     }
 
 }
