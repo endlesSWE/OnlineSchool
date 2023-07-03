@@ -77,13 +77,13 @@ public class ScannerUtils {
 
             case 4:
                 lecture = createLectureFromUserInput();
-                System.out.println("New lecture's ID — " + lecture.getLectureId() + "; new lecture's Name — " + lecture.getLectureName());
+                System.out.println("New lecture's ID — " + lecture.getLectureId() + "; new lecture's Name — " + lecture.getLectureName() + "; subject's Id:" + lecture.getSubjectId());
                 System.out.println("Do you want to create another lecture? (Y/N)");
                 scanner.nextLine();
                 String choice3 = scanner.nextLine();
                 if (choice3.equals("Y")){
                     lecture = createLectureFromUserInput();
-                    System.out.println("New lecture's ID — " + lecture.getLectureId() + "; new lecture's Name — " + lecture.getLectureName());
+                    System.out.println("New lecture's ID — " + lecture.getLectureId() + "; new lecture's Name — " + lecture.getLectureName() + "; subject's Id:" + lecture.getSubjectId());
                 }
                 if (choice3.equals("N")) {
                     System.out.println("Shutting down...");
@@ -148,9 +148,13 @@ public class ScannerUtils {
         int lectureId = scanner.nextInt();
 
         System.out.println("Enter lecture's Name:");
+        scanner.nextLine();
         String lectureName = scanner.nextLine();
 
-        return new Lecture(lectureName, lectureId, );
+        System.out.println("Enter subject's Id for that lecture:");
+        int subjectId = Integer.parseInt(scanner.nextLine());
+
+        return new Lecture(lectureName, lectureId, subjectId);
     }
 
 }

@@ -5,16 +5,17 @@ public class Lecture {
     private int lectureId;
     private String lectureName;
     public static int lectureCount = 0;
+    private int subjectId;
     private Subject subject;
     Homework homework;
     Teacher teacher;
     Student student;
 
 
-    public Lecture(String lectureName, int lectureId, Subject subject) {
+    public Lecture(String lectureName, int lectureId, int subjectId) {
         this.lectureName = lectureName;
         this.lectureId = lectureId;
-        this.subject = subject;
+        this.subjectId = subjectId;
         lectureCount ++;
 
     }
