@@ -2,6 +2,7 @@ package core;
 
 import core.entities.Lecture;
 import core.entities.Subject;
+import core.utils.ScannerUtils;
 
 public class Main {
 
@@ -23,10 +24,11 @@ public class Main {
         Lecture lecture10 = new Lecture("Romanticism and the Poetry of William Wordsworth", 3, subject2);
         Lecture lecture11 = new Lecture("Modernism and the Works of T.S. Eliot", 4, subject2);
 
-        int subjectID = lecture5.subject().getSubjectId();
-        System.out.println("Subject ID of 6th lecture: " + subjectID);
 
-        Lecture.showLectureCount();
+        ScannerUtils scannerUtils = new ScannerUtils();
+
+        scannerUtils.setUpConsole();
+
     }
 
 

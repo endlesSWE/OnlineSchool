@@ -16,6 +16,14 @@ public class Subject {
         subjectCount ++;
     }
 
+    public void setSubjectId(int subjectId) {
+        this.subjectId = subjectId;
+    }
+
+    public void setSubjectName(String subjectName) {
+        this.subjectName = subjectName;
+    }
+
     public int getSubjectId() {
         return subjectId;
     }
@@ -23,6 +31,7 @@ public class Subject {
     public String getSubjectName() {
         return subjectName;
     }
+
 
     public static void showSubjectCount(){
         System.out.println("Total number of subjects: " + subjectCount);

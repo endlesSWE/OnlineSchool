@@ -15,6 +15,15 @@ public class Student {
 
         studentCount ++;
     }
+
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public String getStudentName() {
+        return studentName;
+    }
+
     public static void showStudentCount(){
         System.out.println("Total number of students:" + studentCount);
     }

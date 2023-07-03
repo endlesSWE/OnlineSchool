@@ -28,6 +28,10 @@ public class Lecture {
         return subject;
     }
 
+    public Subject getSubjectId() {
+        return subject;
+    }
+
     public static void showLectureCount () {
         System.out.println("Total number of lectures: " + lectureCount);
     }
