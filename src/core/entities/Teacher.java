@@ -15,6 +15,15 @@ public class Teacher {
 
         teacherCount ++;
     }
+
+    public int getTeacherId() {
+        return teacherId;
+    }
+
+    public String getTeacherName() {
+        return teacherName;
+    }
+
     public static void showTeacherCount(){
         System.out.println("Total number of teachers: " + teacherCount);
     }
