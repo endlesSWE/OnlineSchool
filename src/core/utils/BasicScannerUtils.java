@@ -7,7 +7,7 @@ import core.entities.Teacher;
 
 import java.util.Scanner;
 
-public class ScannerUtils {
+public class BasicScannerUtils {
 
     public void setUpConsole() {
         final Scanner scanner = new Scanner(System.in);
@@ -77,13 +77,13 @@ public class ScannerUtils {
 
             case 4:
                 lecture = createLectureFromUserInput();
-                System.out.println("New lecture's ID — " + lecture.getLectureId() + "; new lecture's Name — " + lecture.getLectureName() + "; subject's Id:" + lecture.getSubjectId());
+                System.out.println("New lecture's ID — " + lecture.getLectureId() + "; new lecture's Name — " + lecture.getLectureName());
                 System.out.println("Do you want to create another lecture? (Y/N)");
                 scanner.nextLine();
                 String choice3 = scanner.nextLine();
                 if (choice3.equals("Y")){
                     lecture = createLectureFromUserInput();
-                    System.out.println("New lecture's ID — " + lecture.getLectureId() + "; new lecture's Name — " + lecture.getLectureName() + "; subject's Id:" + lecture.getSubjectId());
+                    System.out.println("New lecture's ID — " + lecture.getLectureId() + "; new lecture's Name — " + lecture.getLectureName());
                 }
                 if (choice3.equals("N")) {
                     System.out.println("Shutting down...");
@@ -151,11 +151,11 @@ public class ScannerUtils {
         scanner.nextLine();
         String lectureName = scanner.nextLine();
 
-        System.out.println("Enter subject's Id for that lecture:");
-        int subjectId = Integer.parseInt(scanner.nextLine());
-
-        return new Lecture(lectureName, lectureId, subjectId);
+        return new Lecture(lectureName, lectureId);
     }
 
 }
 
+//         BasicScannerUtils scannerUtils = new BasicScannerUtils();
+//
+//        scannerUtils.setUpConsole();
