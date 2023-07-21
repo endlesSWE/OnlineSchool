@@ -12,10 +12,9 @@ public class Lecture {
     Student student;
 
 
-    public Lecture(String lectureName, int lectureId, int subjectId) {
+    public Lecture(String lectureName, int lectureId) {
         this.lectureName = lectureName;
         this.lectureId = lectureId;
-        this.subjectId = subjectId;
         lectureCount ++;
 
     }
